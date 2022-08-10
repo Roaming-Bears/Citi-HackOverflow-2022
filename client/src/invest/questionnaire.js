@@ -1,12 +1,5 @@
-import React, { Component } from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-    Animated,
-    TouchableOpacity,
-    Dimensions,
-} from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Animated, TouchableOpacity, Dimensions } from 'react-native';
 
 export default class animations extends Component {
     state = {
@@ -190,6 +183,3 @@ const styles = StyleSheet.create({
         marginBottom: 50,
     },
 });
-
-
-export default animations

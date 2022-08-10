@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import animations from './components/questionnaire.js'
-=======
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
->>>>>>> origin
+import animations from './invest/questionnaire.js'
 
 class App extends Component {
-
-<<<<<<< HEAD
-=======
   render() {
 
     const headerItems = [
@@ -41,11 +35,11 @@ class App extends Component {
         <Header headerItems={headerItems} />
         <Routes>
           <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="invest" element={<animations />} />
         </Routes>
       </div>
     );
   }
->>>>>>> origin
 }
 
 export default App;

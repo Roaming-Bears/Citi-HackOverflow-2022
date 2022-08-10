@@ -2,7 +2,7 @@ import React from 'react'
 
 function Bankers() {
     return (
-        <div>
+        <div style={{marginTop: '100px'}}>
             <h1 style={{textAlign:'center', backgroundColor: "#D9261C"}}>Clients</h1>
             <table style={{width: '100%'}}>
                 <tr>

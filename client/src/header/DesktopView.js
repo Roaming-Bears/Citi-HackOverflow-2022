@@ -9,7 +9,8 @@ const DesktopView = ({ logo, headerItems }) => {
             fontFamily: "Open Sans, sans-serif",
             fontWeight: 700,
             size: "18px",
-            marginLeft: "38px"
+            marginLeft: "38px",
+            textTransform: "none"
         },
         toolbar: {
             display: "flex",
@@ -18,20 +19,17 @@ const DesktopView = ({ logo, headerItems }) => {
         drawerContainer: {
             padding: "20px 30px",
         },
-        button: {
-            textTransform: "none"
-        }
     }));
 
-    const { menuButton, toolbar, button } = useStyles();
+    const { menuButton, toolbar } = useStyles();
 
     const getMenuButtons = () => {
         return headerItems.map(({ label, href }) => {
             return (
-                <Button className={button}
+                <Button
                     {...{
                         key: label,
-                        color: "#000000",
+                        color: "#161616",
                         className: menuButton,
                         component: RouterLink,
                         to: href

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import animations from './components/questionnaire.js'
+import questionnaire from "./components/questionnaire.js";
 
 function App() {
 
@@ -26,6 +28,10 @@ function App() {
             ))
         )
       }
+    </div>
+
+    </div>
+      questionnaire
     </div>
   );
 }

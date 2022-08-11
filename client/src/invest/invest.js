@@ -40,7 +40,6 @@ const tiers = [
     },
     {
         title: 'Comfortably paced',
-        subheader: 'Most popular',
         returns: '5.5%',
         description: [
             'Moderate risk',
@@ -53,7 +52,6 @@ const tiers = [
         title: 'A real go-getter',
         returns: '8%',
         description: [
-            'AI-advised professionals',
             'For those who want to seize the day',
         ],
         buttonText: 'Contact us',

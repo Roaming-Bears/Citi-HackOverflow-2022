@@ -5,6 +5,8 @@ import Login from './login/Login';
 import Register from './login/Register';
 import ProfilePage from './profile/ProfilePage';
 import Explore from './explore/Explore';
+import News from './homepage/News';
+import { NewsContextProvider } from "./homepage/NewsContext";
 import Dashboard from './dashboard/Dashboard';
 import Community from './community/Community';
 import Plans from './plans/Plans';
@@ -12,6 +14,8 @@ import AuthContext from './auth/AuthContext';
 import AuthService from './auth/AuthService';
 import Logout from './login/Logout';
 import Invest from './invest/invest';
+
+
 
 class App extends Component {
 
@@ -75,12 +79,9 @@ class App extends Component {
         <Routes>
           <Route exact path="explore" element={<Explore />} />
           <Route exact path="logout" element={<Logout />} />
-            <Route exact path="home" element={<News />} />
+            <Route exact path="home" element={<NewsContextProvider> <News /> </NewsContextProvider>} />
             <Route exact path="community" element={<Community />} />
             <Route exact path="dashboard" element={<Dashboard />} />
-            <Route exact path="profile" element={<ProfilePage />} />
-            <Route exact path="login" element={<Login />} />
-            <Route exact path="register" element={<Register />} />
             <Route exact path="invest" element = {<Invest />} />
           </Routes>
         </div>
@@ -89,3 +90,4 @@ class App extends Component {
 }
 
 export default App;
+

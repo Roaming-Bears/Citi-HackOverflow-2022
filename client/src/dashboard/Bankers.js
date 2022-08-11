@@ -4,7 +4,7 @@ import React from 'react'
 function Bankers() {
     return (
         // style={{width: '90%'}}
-        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0" style={{paddingTop:20}}>
             <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-a0i708">
                 <h2 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-nfbrjd" style={{marginLeft: '15px'}}>Clients</h2>
                     <table class="MuiTable-root css-1owb465" style={{width: '100%'}}> 

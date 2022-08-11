@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
+import Login from './login/Login';
+import Register from './login/Register';
 
 class App extends Component {
 
@@ -20,10 +22,6 @@ class App extends Component {
         label: "Community",
         href: "/community"
       },
-      // {
-      //   label: "Sign up/Sign in",
-      //   href: "/login"
-      // },
       {
         label: "Dashboard",
         href: "/dashboard"
@@ -33,8 +31,11 @@ class App extends Component {
     return (
       <div>
         <Header headerItems={headerItems} />
+        <div style={{marginTop: "100px"}} />
         <Routes>
           <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="login" element={<Login />} />
+          <Route exact path="register" element={<Register />} />
         </Routes>
       </div>
     );

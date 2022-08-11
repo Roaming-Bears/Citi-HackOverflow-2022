@@ -4,6 +4,7 @@ import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
 import Login from './login/Login';
 import Register from './login/Register';
+import ProfilePage from './profile/ProfilePage';
 
 class App extends Component {
 
@@ -26,6 +27,10 @@ class App extends Component {
         label: "Dashboard",
         href: "/dashboard"
       },
+      {
+        label: "Profile",
+        href: "/profile"
+      }
     ];
 
     return (
@@ -34,6 +39,7 @@ class App extends Component {
         <div style={{marginTop: "100px"}} />
         <Routes>
           <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="profile" element={<ProfilePage />} />
           <Route exact path="login" element={<Login />} />
           <Route exact path="register" element={<Register />} />
         </Routes>

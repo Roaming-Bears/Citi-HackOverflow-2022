@@ -36,10 +36,6 @@ const Register = () => {
                         <input type="password" name="password" placeholder="password" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" placeholder="password" />
-                    </div>
-                    <div className="form-group">
                         <label htmlFor="confirm_password">Confirm password</label>
                         <input type="password" name="confirm_password" placeholder="confirm password" />
                     </div>

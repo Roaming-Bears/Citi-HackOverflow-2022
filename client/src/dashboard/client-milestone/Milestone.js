@@ -9,7 +9,7 @@ type Milestone = {
     completed: boolean
   };*/
 
-function ProfilePage() {
+function Milestone() {
     return (
         <div style={{marginTop: '100px', textAlign:'center'}}>
             <h2 style={{paddingBottom:10}}>Journey with Roaming Bears</h2>
@@ -35,4 +35,4 @@ function ProfilePage() {
     )
 }
 
-export default ProfilePage
+export default Milestone

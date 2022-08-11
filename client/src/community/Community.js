@@ -8,11 +8,6 @@ const Community = () => {
             <PostCreation />
             <Feed />
         </div>
-        
-        // <div>
-        //     <PostCreation />
-        //     <Feed />
-        // </div>
     )
 }
 

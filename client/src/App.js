@@ -8,6 +8,7 @@ import News from './homepage/News';
 import Dashboard from './dashboard/Dashboard';
 import Feed from './community/postsDisplay/Feed';
 import Community from './community/Community';
+import Plans from './plans/Plans';
 
 class App extends Component {
 
@@ -54,6 +55,7 @@ class App extends Component {
           <Route exact path="profile" element={<ProfilePage />} />
           <Route exact path="login" element={<Login />} />
           <Route exact path="register" element={<Register />} />
+          <Route exact path="invest" element = {<Plans />} />
         </Routes>
       </div>
     );

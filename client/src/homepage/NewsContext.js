@@ -9,7 +9,7 @@ export const NewsContextProvider = (props) => {
 
     useEffect(() => {
         axios.get(
-            `https://newsapi.org/v2/top-headlines?domains=wsj.com&apiKey=${apiKey}`
+            `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=${apiKey}`
         ).then((response) => setData(response.data))
             .catch((error) => console.log(error));
 

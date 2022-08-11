@@ -39,6 +39,14 @@ class App extends Component {
       {
         label: "Dashboard",
         href: "/dashboard"
+      },
+      {
+        label: "Login",
+        href: "/login"
+      },
+      {
+        label: "Register",
+        href: "/register"
       }
     ];
 

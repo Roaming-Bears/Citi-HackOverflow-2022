@@ -8,7 +8,7 @@ import News from './homepage/News';
 import Dashboard from './dashboard/Dashboard';
 import Feed from './community/postsDisplay/Feed';
 import Community from './community/Community';
-import Plans from './plans/Plans';
+import Invest from './invest/invest';
 
 class App extends Component {
 
@@ -45,19 +45,19 @@ class App extends Component {
     ];
 
     return (
-      <div>
-        <Header headerItems={headerItems} />
-        <div style={{marginTop: "100px"}} />
-        <Routes>
-          <Route exact path="home" element={<News />} />
-          <Route exact path="community" element={<Community />} />
-          <Route exact path="dashboard" element={<Dashboard />} />
-          <Route exact path="profile" element={<ProfilePage />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="register" element={<Register />} />
-          <Route exact path="invest" element = {<Plans />} />
-        </Routes>
-      </div>
+        <div>
+          <Header headerItems={headerItems} />
+          <div style={{marginTop: "100px"}} />
+          <Routes>
+            <Route exact path="home" element={<News />} />
+            <Route exact path="community" element={<Community />} />
+            <Route exact path="dashboard" element={<Dashboard />} />
+            <Route exact path="profile" element={<ProfilePage />} />
+            <Route exact path="login" element={<Login />} />
+            <Route exact path="register" element={<Register />} />
+            <Route exact path="invest" element = {<Invest />} />
+          </Routes>
+        </div>
     );
   }
 }

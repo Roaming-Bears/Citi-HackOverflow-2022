@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
-import Bankers from "./dashboard/Bankers"
+import Login from './login/Login';
+import Register from './login/Register';
+import ProfilePage from './profile/ProfilePage';
+import News from './homepage/News';
+import Dashboard from './dashboard/Dashboard';
+import Feed from './community/postsDisplay/Feed';
+import Community from './community/Community';
+import Invest from './invest/invest';
 
-import animations from './invest/questionnaire.js'
-
-import { StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ProductsList } from './dashboard/ProductsList';
-import { ProductDetails } from './dashboard/ProductDetails';
-
-const Stack = createNativeStackNavigator();
 class App extends Component {
+
+  /* palette */
+  // red: #D9261C
+  // navy blue: #003B70
+  // white: #FCFDFD
+  // black: #161616
+  // grey: #4E4E4E
 
   render() {
 
@@ -29,47 +34,33 @@ class App extends Component {
         label: "Community",
         href: "/community"
       },
-      // {
-      //   label: "Sign up/Sign in",
-      //   href: "/login"
-      // },
       {
         label: "Dashboard",
         href: "/dashboard"
       },
+      {
+        label: "Profile",
+        href: "/profile"
+      }
     ];
 
     return (
-      <div>
-        <Header headerItems={headerItems} />
-        <Routes>
-          <Route exact path="dashboard" element={<Bankers />} />
-          <Route exact path="invest" element={<animations />} />
-        </Routes>
-
-        <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name='Products' component={ProductsList}
-                          options={() => ({
-                            title: 'Products',
-                            headerTitleStyle: styles.headerTitle
-                          })}/>
-            <Stack.Screen name='ProductDetails' component={ProductDetails}
-                          options={() => ({
-                            title: 'Product details',
-                            headerTitleStyle: styles.headerTitle
-                          })} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </div>
+        <div>
+          <Header headerItems={headerItems} />
+          <div style={{marginTop: "100px"}} />
+          <Routes>
+            <Route exact path="home" element={<News />} />
+            <Route exact path="community" element={<Community />} />
+            <Route exact path="dashboard" element={<Dashboard />} />
+            <Route exact path="profile" element={<ProfilePage />} />
+            <Route exact path="login" element={<Login />} />
+            <Route exact path="register" element={<Register />} />
+            <Route exact path="invest" element = {<Invest />} />
+          </Routes>
+        </div>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  headerTitle: {
-    fontSize: 20
-  }
-});
-
 export default App;
+

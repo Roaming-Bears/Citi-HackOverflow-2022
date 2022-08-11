@@ -15,13 +15,14 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 40px 0;
+  margin: 150px 0;
 }
 .timeline-container::after {
-  background-color: #e17b77;
+  background-color: #003B7D;
   content: '';
   position: absolute;
   left: calc(50% - 2px);
+  top: calc(15% - 2px);
   width: 4px;
   height: 100%;
 }
@@ -111,7 +112,7 @@ body {
 }
 .timeline-item-content .circle {
   background-color: #fff;
-  border: 3px solid #e17b77;
+  border: 3px solid #003b7d;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 10px);

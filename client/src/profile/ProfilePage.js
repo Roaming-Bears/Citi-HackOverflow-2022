@@ -11,24 +11,26 @@ type Milestone = {
 
 function ProfilePage() {
     return (
-        <div style={{marginTop: '100px', marginLeft:'130px'}}>
-            <h2 style={{marginLeft:'180px'}}>Journey with Roaming Bears</h2>
+        <div style={{marginTop: '100px', textAlign:'center'}}>
+            <h2 style={{paddingBottom:10}}>Journey with Roaming Bears</h2>
             <ProgressBar 
                 percentage={40} 
                 color="green" 
                 transitionSpeed={1000} 
                 milestoneCount={6} 
-                style={{width:'80%'}}
+                style={{width:'100%'}}
                 //Milestone={(milestone: Milestone) => <div><small>Milestone</small></div>}
                 //CurrentMilestone={(milestone: Milestone) => <div>current</div>}
                 //Milestone1={(milestone: Milestone) => <div>current</div>}
                 //CompletedMilestone={(milestone: Milestone) => <div>completed</div>}
                 //Milestone={(milestone) => (<div>1<Badge status="success" /></div>)}
                 />
-                <p style={{marginLeft:'-70px'}}>Created Account</p>
-                <p style={{marginLeft:'80px', marginTop:'-34px'}}>Purchased 1st</p>
-                <p style={{marginLeft:'80px', marginTop:'-17px'}}>investment plan</p>
-                <p style={{marginLeft:'220px', marginTop:'-51px'}}>Saved $100,000</p>
+            <h5 style={{display:'flex', alignItems:'center', textAlign:'left', paddingTop:10}}>
+                <p style={{marginLeft:'-50px', flexGrow:0.1}}>Created Account</p>
+                <p style={{inlineSize:'150px', overflowWrap:'break-word'}}>Purchased 1st investment plan</p>
+                <p style={{}}>Saved $100,000</p>
+            </h5>
+            
         </div>
     )
 }

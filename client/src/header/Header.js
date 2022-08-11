@@ -4,6 +4,7 @@ import { AppBar, makeStyles } from "@material-ui/core";
 import { ReactComponent as Logo } from './assets/logo.svg'
 import DesktopView from './DesktopView';
 import MobileView from './MobileView';
+import "./headerStyle.css"
 
 const Header = ({ headerItems }) => {
 

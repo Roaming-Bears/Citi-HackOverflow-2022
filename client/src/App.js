@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
+import ProfilePage from './profile/ProfilePage';
 
 class App extends Component {
 
@@ -28,6 +29,10 @@ class App extends Component {
         label: "Dashboard",
         href: "/dashboard"
       },
+      {
+        label: "Profile",
+        href: "/profile"
+      }
     ];
 
     return (
@@ -35,6 +40,7 @@ class App extends Component {
         <Header headerItems={headerItems} />
         <Routes>
           <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="profile" element={<ProfilePage />} />
         </Routes>
       </div>
     );

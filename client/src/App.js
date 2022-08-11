@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
 import Timeline from './timeline/Timeline';
-import './App.css';
+import './timeline/timeline.css';
 
 class App extends Component {
 

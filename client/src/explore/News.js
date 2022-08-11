@@ -12,10 +12,6 @@ const News = (props) => {
 
     return (
         <div>
-            <h1 className="head__text">What's happening in the world today?</h1>
-            <div>
-                <WordCloud />
-            </div>
             <div className="all__news">
                 {data
                 ? data.articles.map(news => (

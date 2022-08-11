@@ -11,7 +11,7 @@ const PostCreation = () => {
                 <img className="user__img" src={image_src} alt="" />
                 <input
                     className="input__field"
-                    placeholder="What do you want to share with the community?"
+                    placeholder="What do you want to share today?"
                 />
                 <button className="post__button">Post</button>
             </div>

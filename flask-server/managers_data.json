@@ -1,5 +1,6 @@
 [
     {
+        "role": "banker",
         "username": "Fabian",
         "email": "fabian.123@gmail.com",
         "password": "fabian123",
@@ -8,6 +9,7 @@
         ]
     },
     {
+        "role": "banker",
         "username": "Raphael",
         "email": "raphael.123@gmail.com",
         "password": "raphael123",

@@ -74,11 +74,10 @@ class App extends Component {
         <div style={{marginTop: "100px"}} />
           <Routes>
             <Route exact path="explore" element={<Explore />} />
-            <Route exact path="logout" element={<Logout />} />
-            <Route exact path="home" element={<NewsContextProvider> <News /> </NewsContextProvider>} />
             <Route exact path="community" element={<Community />} />
+            <Route exact path="invest" element={<Invest />} />
             <Route exact path="dashboard" element={<Dashboard />} />
-            <Route exact path="invest" element = {<Invest />} />
+            <Route exact path="logout" element={<Logout />} />
           </Routes>
         </div>
     );

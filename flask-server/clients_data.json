@@ -1,15 +1,18 @@
 [
     {
+        "role": "client",
         "username": "Eric",
         "email": "eric.123@gmail.com",
         "password": "eric123"
     },
     {
+        "role": "client",
         "username": "Austin",
         "email": "austin.123@gmail.com",
         "password": "austin123"
     },
     {
+        "role": "client",
         "username": "Serena",
         "email": "serena.123@gmail.com",
         "password": "serena123"

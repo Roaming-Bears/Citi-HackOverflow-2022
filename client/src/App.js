@@ -4,8 +4,19 @@ import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
 import Timeline from './timeline/Timeline';
 import './timeline/timeline.css';
+import Login from './login/Login';
+import Register from './login/Register';
+import ProfilePage from './profile/ProfilePage';
+import News from './homepage/News';
 
 class App extends Component {
+
+  /* palette */
+  // red: #D9261C
+  // navy blue: #003B70
+  // white: #FCFDFD
+  // black: #161616
+  // grey: #4E4E4E
 
   render() {
 
@@ -22,21 +33,26 @@ class App extends Component {
         label: "Community",
         href: "/community"
       },
-      // {
-      //   label: "Sign up/Sign in",
-      //   href: "/login"
-      // },
       {
         label: "Dashboard",
         href: "/dashboard"
       },
+      {
+        label: "Profile",
+        href: "/profile"
+      }
     ];
 
     return (
       <div>
         <Header headerItems={headerItems} />
+        <div style={{marginTop: "100px"}} />
         <Routes>
+          <Route exact path="home" element={<News />} />
           <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="profile" element={<ProfilePage />} />
+          <Route exact path="login" element={<Login />} />
+          <Route exact path="register" element={<Register />} />
         </Routes>
         <Header headerItems={headerItems} />
         <Routes>

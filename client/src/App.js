@@ -3,12 +3,14 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Login from './login/Login';
 import Register from './login/Register';
-import ProfilePage from './profile/ProfilePage';
 import News from './homepage/News';
+import { NewsContextProvider } from "./homepage/NewsContext";
 import Dashboard from './dashboard/Dashboard';
 import Feed from './community/postsDisplay/Feed';
 import Community from './community/Community';
 import Invest from './invest/invest';
+
+
 
 class App extends Component {
 
@@ -37,10 +39,6 @@ class App extends Component {
       {
         label: "Dashboard",
         href: "/dashboard"
-      },
-      {
-        label: "Profile",
-        href: "/profile"
       }
     ];
 
@@ -49,10 +47,9 @@ class App extends Component {
           <Header headerItems={headerItems} />
           <div style={{marginTop: "100px"}} />
           <Routes>
-            <Route exact path="home" element={<News />} />
+            <Route exact path="home" element={<NewsContextProvider> <News /> </NewsContextProvider>} />
             <Route exact path="community" element={<Community />} />
             <Route exact path="dashboard" element={<Dashboard />} />
-            <Route exact path="profile" element={<ProfilePage />} />
             <Route exact path="login" element={<Login />} />
             <Route exact path="register" element={<Register />} />
             <Route exact path="invest" element = {<Invest />} />

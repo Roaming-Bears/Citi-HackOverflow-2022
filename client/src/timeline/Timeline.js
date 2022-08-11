@@ -5,7 +5,7 @@ import TimelineItem from './TimelineItem'
 const Timeline =() => 
     timelineData.length > 0 && (
         <div className='timeline-container'>
-            <h1 style={{textAlign:'center',padding: 20}}>Journey with Citi</h1>
+            <h1 style={{textAlign:'center',padding: 20}}>Application Status</h1>
             {timelineData.map((data, idx) => (
                 <TimelineItem data={data} key={idx} />
             ))}

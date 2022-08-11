@@ -6,6 +6,7 @@ import Register from './login/Register';
 import ProfilePage from './profile/ProfilePage';
 import News from './homepage/News';
 import Dashboard from './dashboard/Dashboard';
+import Feed from './community/Feed';
 
 class App extends Component {
 
@@ -47,6 +48,7 @@ class App extends Component {
         <div style={{marginTop: "100px"}} />
         <Routes>
           <Route exact path="home" element={<News />} />
+          <Route exact path="community" element={<Feed />} />
           <Route exact path="dashboard" element={<Dashboard />} />
           <Route exact path="profile" element={<ProfilePage />} />
           <Route exact path="login" element={<Login />} />

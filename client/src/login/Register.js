@@ -17,7 +17,7 @@ const Register = () => {
             <div className="content">
                 <div className="image">
                     <img
-                        src="https://media.istockphoto.com/vectors/register-account-submit-access-login-password-username-internet-vector-id1281150061?k=20&m=1281150061&s=612x612&w=0&h=wpCvmggedXRECWK-FVL98MMllubyevIrXuUu50fdCqE="
+                        src="https://thumbs.dreamstime.com/b/business-153419824.jpg"
                         alt="registerImg"
                     />
                 </div>

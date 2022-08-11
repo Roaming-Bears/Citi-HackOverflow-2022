@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
-import Login from './login/Login';
-import Register from './login/Register';
-import ProfilePage from './profile/ProfilePage';
 import Explore from './explore/Explore';
-import News from './homepage/News';
-import { NewsContextProvider } from "./homepage/NewsContext";
+import News from './explore/News';
+import { NewsContextProvider } from "./explore/NewsContext";
 import Dashboard from './dashboard/Dashboard';
 import Community from './community/Community';
-import Plans from './plans/Plans';
 import AuthContext from './auth/AuthContext';
 import AuthService from './auth/AuthService';
 import Logout from './login/Logout';
@@ -76,9 +72,9 @@ class App extends Component {
       <div>
         <Header headerItems={headerItems} />
         <div style={{marginTop: "100px"}} />
-        <Routes>
-          <Route exact path="explore" element={<Explore />} />
-          <Route exact path="logout" element={<Logout />} />
+          <Routes>
+            <Route exact path="explore" element={<Explore />} />
+            <Route exact path="logout" element={<Logout />} />
             <Route exact path="home" element={<NewsContextProvider> <News /> </NewsContextProvider>} />
             <Route exact path="community" element={<Community />} />
             <Route exact path="dashboard" element={<Dashboard />} />

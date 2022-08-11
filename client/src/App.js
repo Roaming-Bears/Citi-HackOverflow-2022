@@ -11,6 +11,7 @@ import Plans from './plans/Plans';
 import AuthContext from './auth/AuthContext';
 import AuthService from './auth/AuthService';
 import Logout from './login/Logout';
+import Invest from './invest/invest';
 
 class App extends Component {
 
@@ -73,12 +74,16 @@ class App extends Component {
         <div style={{marginTop: "100px"}} />
         <Routes>
           <Route exact path="explore" element={<Explore />} />
-          <Route exact path="community" element={<Community />} />
-          <Route exact path="dashboard" element={<Dashboard />} />
-          <Route exact path="invest" element={<Plans />} />
           <Route exact path="logout" element={<Logout />} />
-        </Routes>
-      </div>
+            <Route exact path="home" element={<News />} />
+            <Route exact path="community" element={<Community />} />
+            <Route exact path="dashboard" element={<Dashboard />} />
+            <Route exact path="profile" element={<ProfilePage />} />
+            <Route exact path="login" element={<Login />} />
+            <Route exact path="register" element={<Register />} />
+            <Route exact path="invest" element = {<Invest />} />
+          </Routes>
+        </div>
     );
   }
 }

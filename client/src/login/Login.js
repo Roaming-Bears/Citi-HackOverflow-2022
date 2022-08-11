@@ -1,4 +1,6 @@
 import { Button } from '@material-ui/core'
+import { Radio, RadioGroup, FormControlLabel, FormControl } from '@mui/material'
+import FormLabel from '@mui/material/FormLabel';
 import React from 'react'
 import { useNavigate } from 'react-router'
 import "./style.css"
@@ -22,6 +24,13 @@ const Login = () => {
                     />
                 </div>
                 <div className="form">
+                    <FormControl className="form-select">
+                        <FormLabel>I am a...</FormLabel>
+                        <RadioGroup row>
+                            <FormControlLabel value="client" control={<Radio />} label="client" />
+                            <FormControlLabel value="manager" control={<Radio />} label="manager" />
+                        </RadioGroup>
+                    </FormControl>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input type="text" name="username" placeholder="username" />

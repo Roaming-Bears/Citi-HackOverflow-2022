@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { AppBar, makeStyles } from "@material-ui/core";
-import { ReactComponent as Logo } from '../common/assets/logo.svg'
+import { ReactComponent as Logo } from './assets/logo.svg'
 import DesktopView from './DesktopView';
 import MobileView from './MobileView';
 

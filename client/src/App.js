@@ -5,8 +5,16 @@ import Bankers from "./dashboard/Bankers"
 import Login from './login/Login';
 import Register from './login/Register';
 import ProfilePage from './profile/ProfilePage';
+import News from './homepage/News';
 
 class App extends Component {
+
+  /* palette */
+  // red: #D9261C
+  // navy blue: #003B70
+  // white: #FCFDFD
+  // black: #161616
+  // grey: #4E4E4E
 
   render() {
 
@@ -38,6 +46,7 @@ class App extends Component {
         <Header headerItems={headerItems} />
         <div style={{marginTop: "100px"}} />
         <Routes>
+          <Route exact path="home" element={<News />} />
           <Route exact path="dashboard" element={<Bankers />} />
           <Route exact path="profile" element={<ProfilePage />} />
           <Route exact path="login" element={<Login />} />

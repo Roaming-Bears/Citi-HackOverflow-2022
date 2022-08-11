@@ -6,7 +6,7 @@ const DesktopView = ({ logo, headerItems }) => {
 
     const useStyles = makeStyles(() => ({
         menuButton: {
-            fontFamily: "Open Sans, sans-serif",
+            fontFamily: "inter",
             fontWeight: 700,
             size: "18px",
             marginLeft: "38px",

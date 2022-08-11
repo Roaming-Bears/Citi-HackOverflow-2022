@@ -6,7 +6,7 @@ import "./milestone.css"
 const ClientMilestone =() =>
     data.length > 0 && (
         <div className='timeline-container'>
-            <h1 style={{textAlign:'center',padding: 20}}>Client Milestone</h1>
+            <h1 style={{textAlign:'center',padding: 20, marginBottom: "40px"}}>Your journey with Roaming Bears 👣</h1>
             {data.map((data, idx) => (
                 <MilestoneItem data={data} key={idx} />
             ))}

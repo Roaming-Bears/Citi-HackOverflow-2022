@@ -11,8 +11,8 @@ function WordCloud() {
     return (
         <div >
             <ReactWordcloud 
-            words={Words} 
-            options={options}
+                words={Words} 
+                options={options}
             />
         </div>
     )

@@ -1,25 +1,25 @@
 const data = [
     {
-        text: 'Application Opening',
+        text: 'Application Submission',
         date: '3 May 2022',
         category: {
-            tag: 'Amazing!',
+            tag: '3 Days',
             color: '#003B7D'
         }
     },
     {
-        text: 'First Deposit with Citi',
-        date: '8 May 2022',
+        text: 'Application under Review',
+        date: '6 May 2022',
         category: {
-            tag: "Splendid!",
+            tag: "3 Days",
             color: '#003B7D'
         }
     },
     {
-        text: '100 days with Citi',
-        date: '11 Aug 2022',
+        text: 'Application Approved',
+        date: '9 May 2022',
         category: {
-            tag: 'Time flies!',
+            tag: '3 Days',
             color: '#003B7D'
         }
     }

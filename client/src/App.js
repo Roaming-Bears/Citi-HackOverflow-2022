@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
 import Bankers from "./dashboard/Bankers"
+import Timeline from './timeline/Timeline';
+import './App.css';
 
 class App extends Component {
 
@@ -35,6 +37,10 @@ class App extends Component {
         <Header headerItems={headerItems} />
         <Routes>
           <Route exact path="dashboard" element={<Bankers />} />
+        </Routes>
+        <Header headerItems={headerItems} />
+        <Routes>
+          <Route exact path="home" element={<Timeline />} />
         </Routes>
       </div>
     );

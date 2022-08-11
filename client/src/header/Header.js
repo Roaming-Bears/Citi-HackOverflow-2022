@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { AppBar, makeStyles } from "@material-ui/core";
 import { ReactComponent as Logo } from './assets/logo.svg'

@@ -4,11 +4,13 @@ import Header from './header/Header'
 import Login from './login/Login';
 import Register from './login/Register';
 import ProfilePage from './profile/ProfilePage';
-import News from './homepage/News';
+import Explore from './explore/Explore';
 import Dashboard from './dashboard/Dashboard';
-import Feed from './community/postsDisplay/Feed';
 import Community from './community/Community';
 import Plans from './plans/Plans';
+import AuthContext from './auth/AuthContext';
+import AuthService from './auth/AuthService';
+import Logout from './login/Logout';
 
 class App extends Component {
 
@@ -19,43 +21,62 @@ class App extends Component {
   // black: #161616
   // grey: #4E4E4E
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      authenticated: false,
+      user: {}
+    }
+  }
+
+  componentDidMount() {
+    const user = AuthService.getCurrUser();
+
+    if (user) {
+      this.setState({
+        authenticated: true,
+        user: user
+      })
+    }
+  }
+
   render() {
+
+    const { authenticated, user } = this.state
 
     const headerItems = [
       {
-        label: "Home",
-        href: "/home"
+          label: "Explore",
+          href: "/explore"
       },
       {
-        label: "Invest",
-        href: "/invest"
+          label: "Invest",
+          href: "/invest"
       },
       {
-        label: "Community",
-        href: "/community"
+          label: "Community",
+          href: "/community"
       },
-      {
-        label: "Dashboard",
-        href: "/dashboard"
-      },
-      {
-        label: "Profile",
-        href: "/profile"
-      }
-    ];
+    ]
+
+    if (authenticated) {
+      headerItems.push({ label: "Dashboard", href: "/dashboard" })
+      headerItems.push({ label: "Sign Out", href: "/logout"})
+    } else {
+      headerItems.push({ label: "Sign In/Sign Up", href: "/register" })
+    }
 
     return (
       <div>
         <Header headerItems={headerItems} />
         <div style={{marginTop: "100px"}} />
         <Routes>
-          <Route exact path="home" element={<News />} />
+          <Route exact path="explore" element={<Explore />} />
           <Route exact path="community" element={<Community />} />
           <Route exact path="dashboard" element={<Dashboard />} />
-          <Route exact path="profile" element={<ProfilePage />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="register" element={<Register />} />
-          <Route exact path="invest" element = {<Plans />} />
+          <Route exact path="invest" element={<Plans />} />
+          <Route exact path="logout" element={<Logout />} />
         </Routes>
       </div>
     );

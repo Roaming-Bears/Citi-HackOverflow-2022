@@ -7,14 +7,14 @@ app = Flask(__name__)
 @app.route("/clients", methods=['GET'])
 def clients():
     return jsonify({
-        "clients": json.load(open('clients_data.json'))
+        "data": json.load(open('clients_data.json'))
     }), 200
 
 
 @app.route("/managers", methods=['GET'])
 def managers():
     return jsonify({
-        "managers": json.load(open('managers_data.json'))
+        "data": json.load(open('managers_data.json'))
     }), 200
 
 

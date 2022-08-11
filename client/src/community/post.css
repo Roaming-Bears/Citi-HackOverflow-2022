@@ -12,50 +12,50 @@ body {
   background: #FCFDFD;
 }
 
-/* news */
+/* feed */
 .head__text {
   margin-top: 30px;
 }
 
-.all__news {
+.feed {
   margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
-/* news article */
-.news {
+/* post */
+.post {
   max-width: 500px;
   padding: 30px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }
 
-.news__title {
+.post__image {
+    max-width: 300px;
+    height: auto;
+}
+
+.post__title {
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
 }
 
-.news__desc {
+.post__desc {
   padding-top: 10px;
   line-height: 25px;
   font-size: 14px;
   padding-bottom: 10px;
 }
 
-.news__author {
+.post__user {
   margin-right: 10px;
   color: #003B70;
   font-style: italic;
 }
 
-.news__published {
-  margin-right: 10px;
-}
-
-.news__source,
-.news__published {
+.post__date {
   display: inline-block;
   margin-top: 10px;
   color: rgb(122, 122, 122);

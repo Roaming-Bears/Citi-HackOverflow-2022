@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './header/Header'
-import Bankers from "./dashboard/Bankers"
-import Timeline from './timeline/Timeline';
-import './timeline/timeline.css';
 import Login from './login/Login';
 import Register from './login/Register';
 import ProfilePage from './profile/ProfilePage';
 import News from './homepage/News';
+import Dashboard from './dashboard/Dashboard';
 
 class App extends Component {
 
@@ -49,14 +47,10 @@ class App extends Component {
         <div style={{marginTop: "100px"}} />
         <Routes>
           <Route exact path="home" element={<News />} />
-          <Route exact path="dashboard" element={<Bankers />} />
+          <Route exact path="dashboard" element={<Dashboard />} />
           <Route exact path="profile" element={<ProfilePage />} />
           <Route exact path="login" element={<Login />} />
           <Route exact path="register" element={<Register />} />
-        </Routes>
-        <Header headerItems={headerItems} />
-        <Routes>
-          <Route exact path="home" element={<Timeline />} />
         </Routes>
       </div>
     );

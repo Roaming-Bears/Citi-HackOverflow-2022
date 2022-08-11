@@ -26,8 +26,8 @@ function ProfilePage() {
                 //Milestone={(milestone) => (<div>1<Badge status="success" /></div>)}
                 />
             <h5 style={{display:'flex', alignItems:'center', textAlign:'left', paddingTop:10}}>
-                <p style={{marginLeft:'-50px', flexGrow:0.1}}>Created Account</p>
-                <p style={{inlineSize:'150px', overflowWrap:'break-word'}}>Purchased 1st investment plan</p>
+                <p style={{marginLeft:'-40px', flexGrow:0.13}}>Created Account</p>
+                <p style={{inlineSize:'140px', overflowWrap:'break-word'}}>Purchased 1st investment plan</p>
                 <p style={{}}>Saved $100,000</p>
             </h5>
             
